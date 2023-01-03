@@ -1,0 +1,580 @@
+.poke-card{
+    width: 100%;
+    max-width: 330px;
+    border-radius: 0.5em;
+    border: 0.3em solid rgba(255, 48, 245, 0.644);
+    cursor: pointer;
+    background-color: white;
+    transition: transform 100ms ease;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.poke-card:hover{
+    transform: scale(1.1);
+}
+
+.poke-card__header{
+    background-color: aquamarine;
+    height: 120px;
+    position: relative;
+    border-radius: 0.1em 0.2em 100px 1px;
+}
+
+.poke-card__sprite{
+    width: 50%;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.poke-card__body{
+    padding-top: 2.8em;
+}
+
+.poke-card__name{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.poke-card__types-container{
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.poke-card__type{
+    position: relative;
+    font-weight: 300;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+}
+
+.poke-card__type:nth-child(2)::before{
+    content: '/';
+    position: absolute;
+    left: -11px;
+}
+
+.poke-card__footer{
+    padding: 1em 0.8em 2em;
+}
+
+.poke-card__stats-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 25px 5px;
+}
+
+.poke-card__stat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4em;
+}
+
+.poke-card__label{
+    text-transform: uppercase;
+    opacity: 0.7;
+    font-weight: 200;
+    font-size: 0.7rem;
+}
+
+.bg-grass{
+    background-size: 500%;
+    background-image:linear-gradient(178.92deg, #c2fcbd 0.92%, #72dd6e 47.96%, #9dcf30 99.08%) ;
+    animation: cardcoloridas 5s infinite;
+}
+
+.bg-fire{
+    background-size: 1000%;
+    background-image:linear-gradient(176.37deg, #ff3503, #f77c4b, #EBAE1B) ;
+    animation: cardcoloridas 3s infinite;
+}
+.bg-fighting{
+    background-size: 500%;
+    background-image:linear-gradient(176.37deg, #da5a05 -32.26%, #ac7d6b 22.55%, #f1e7ce 125.72%) ;
+    animation: cardcoloridas 5s infinite;
+}
+.bg-rock{
+    background-size: 500%;
+    background-image:linear-gradient(176.37deg, #d3cecb -32.26%, #6d8285 22.55%, #111313 125.72%) ;
+    animation: cardcoloridas 5s infinite;
+}
+.bg-electric{
+    background-size: 500%;
+    background-image:linear-gradient(176.37deg, #fdba01 -32.26%, #ffe5ae 22.55%, #f0f33b 125.72%) ;
+    animation: cardcoloridas 5s infinite;
+}
+
+   
+.bg-water{
+     background-size: 500%;
+     background-image: linear-gradient(179.57deg, #133258 -70.14%, #1479FB 56.16%, #82B2F1 214.85%);
+     animation: cardcoloridas 5s infinite;
+} 
+
+.bg-normal{
+    background-size: 500%;
+    background-image: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%);
+    animation: cardcoloridas 5s infinite;
+} 
+
+.bg-poison{
+    background-size: 500%;
+    background-image:linear-gradient(177.03deg, #5B3184 -11.97%, #A564E3 71.28%, #CE9BFF 135.64%);
+    animation: cardcoloridas 5s infinite;
+}
+   
+.bg-ice{
+    background-size: 500%;
+    background-image:linear-gradient(177.03deg, #6FBEDF -11.97%, #64CBF5 47.77%, #BDEBFE 136.72%);
+    animation: cardcoloridas 5s infinite;
+}
+
+.bg-dark{
+    background-size: 500%;
+    background-image: linear-gradient(177.03deg, #030706 -11.97%, #0D1211 57.49%, #5A5E5D 135.64%);
+    animation: cardcoloridas 5s infinite;
+}
+
+.bg-dragon{
+    background-size: 500%;
+    background-image: linear-gradient(179.75deg, #478A93 -19.96%, #56A4AE 43.67%, #A2BEC1 138.4%);
+    animation: cardcoloridas 5s infinite;
+}
+
+.bg-magic{
+    background-size: 500%;
+    background-image: linear-gradient(179.75deg, #971B45 -19.96%, #C23867 43.67%, #CD7D98 138.4%);
+    animation: cardcoloridas 5s infinite;
+}
+
+.bg-steel{
+    background-size: 500%;
+    background-image: linear-gradient(179.75deg, #0C1395 -19.96%, #2B319B 43.67%, #7075D9 138.4%);
+    animation: cardcoloridas 5s infinite;
+}
+
+.bg-ground{
+    background-size: 500%;
+    background-image: linear-gradient(179.75deg, #654008 -19.96%, #895C1A 43.67%, #D69638 138.4%);
+    animation: cardcoloridas 5s infinite;
+}
+
+.bg-bug{
+    background-size: 500%;
+    background-image: linear-gradient(177.56deg, #62DB60 -58.92%, #3BB039 16.57%, #AAFFA8 209.53%);
+    animation: cardcoloridas 5s infinite;
+}
+
+.bg-ghost{
+    background-size: 500%;
+    background-image: linear-gradient(177.03deg, #323569 -11.97%, #454AA8 57.49%, #787DDA 135.64%);
+    animation: cardcoloridas 5s infinite;
+}
+
+.bg-psychic{
+    background-size: 500%;
+    background-image: linear-gradient(179.75deg, #E62D2D -19.96%, #D13E3E 43.67%, #F07F7F 138.4%);
+    animation: cardcoloridas 5s infinite;
+}    
+
+.bg-flying{
+    background-size: 500%;
+    background-image: linear-gradient(179.75deg, #94bbe9 -19.96%, #c1b5da 43.67%, #eeaeca 138.4%);
+    animation: cardcoloridas 5s infinite;
+}
+
+.bg-fairy{
+    background-size: 500%;
+    background-image: linear-gradient(179.75deg, #d31c65 -19.96%, #d31c81 43.67%, #d31cc4 138.4%);
+    animation: cardcoloridas 5s infinite;
+}
+
+
+
+
+@keyframes cardcoloridas {
+    0%{
+    background-position: 0% 50%;
+    }
+    50%{
+    background-position: 100% 50%;
+    }
+    100% {
+    background-position: 0% 50%;
+    }
+}
+
+
+
+.border-fighting{
+    border-color: #ac7d6b;
+}
+.border-rock{
+    border-color:#79726f ;
+}
+.border-grass{
+    border-color:#1f9e72 ;
+}
+
+.border-fire{
+    border-color:#E35B25;
+}
+.border-electric{
+    border-color:#fffb0f;
+}
+
+.border-fairy{
+    border-color:rgb(253, 50, 162) ;
+}
+.border-psychic{
+    border-color: #ec5e59;
+}
+.border-ghost{
+    border-color: #565ee7;
+}
+.border-bug{
+    border-color: #3BB039;
+}
+.border-ground{
+    border-color: #c99e27;
+}
+.border-dragon{
+    border-color: #20a4ad;
+}
+.border-dark{
+    border-color: #030706;
+}
+.border-ice{
+    border-color: #41c3e4;
+}
+.border-poison{
+    border-color: #9566ee;
+}
+.border-normal{
+    border-color: #9b7092;
+}
+.border-water{
+    border-color: #367af8;
+}
+.border-steel{
+    border-color: #0d48b6;
+}
+magic
+
+
+.color-grass{
+    color: #416568;
+}
+
+.color-fire{
+    color: #E35B25;
+}
+.color-electric{
+    color: #f8bb13;
+}
+.color-rock{
+    color: #362f2c;
+}
+.color-fighting{
+    color: #ac7d6b;
+}
+
+.color-fairy{
+    color: rgb(253, 50, 162);
+}
+.color-psychic{
+    color: #ec5e59;
+}
+.color-ghost{
+    color: #565ee7;
+}
+.color-bug{
+    color: #3BB039;
+}
+.color-ground{
+    color: #c99e27;
+}
+.color-dragon{
+    color: #20a4ad;
+}
+.color-ice{
+    color: #41c3e4;
+}
+.color-poison{
+    color: #9566ee;
+}
+.color-normal{
+    color: #9b7092;
+}
+.color-water{
+    color: #367af8;
+}
+.color-steel{
+    color: #0d48b6;
+}
+.color-grass{
+    color: #1f9e72;
+}
+magic
+
+
+
+.poke__section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* --- solo la card-image*/
+.card__one{
+    padding: 15px;
+    height: auto;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: transform 100ms ease;
+    background-color: #ffffffb9;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.div__img{
+    display: flex;
+    height: 350px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img__poke-one{
+    transition: transform 100ms ease;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    background-size: 500%;
+    background: rgba( 255, 255, 255, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    background-image: url(/src/assets/images/hoja.gif);
+}
+
+.img__poke-one:hover{
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+.power__ul{
+    display: flex;
+    margin: 20px auto;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.power__li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    background: rgba(238, 10, 29, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(44, 46, 77, 0.37);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+
+.power__li2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    background: rgba(9, 250, 170, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(44, 46, 77, 0.37);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.data__name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name__name{
+    text-align: center;
+    padding: 10px;
+    font-size: 40px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    box-shadow: 0 3px 6px #00000080;
+    background-color: rgba(255, 255, 255, 0.712);
+    border-radius: 15px;
+    width: auto;
+    
+}
+
+.poke__num{
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.power__zone{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.abilities__zone{
+    display: flex;
+    text-align: center;
+    min-height: 98px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 300px;
+    gap: 5px;
+    background-color: #ffffff91;
+    box-shadow: 0 3px 6px #00000080;
+    border-radius: 10px;
+}
+
+.type__zone{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 300px;
+    min-height: 98px;
+    gap: 5px;
+    background-color: rgb(255, 123, 0);
+    box-shadow: 0 3px 6px #00000080;
+    border-radius: 10px;
+}
+
+.abilities__text{
+    margin: 10px auto 0;
+    width: 300px;
+    height: 30px;
+    text-align: center;
+}
+
+.type__text{
+    margin: 10px auto 0;
+    width: 300px;
+    height: 30px;
+    text-align: center;
+}
+
+
+.box__end{
+    display: flex;
+    height: 500px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.stats__end{
+    width: 30%;
+    display: flex;
+    flex-direction:column;
+    margin: 20px;
+    justify-content: center;
+    box-shadow: 0 3px 6px #00000080;
+    border-radius: 1px 10px 10px 1px ;
+    background-color: #2ed1a0;
+}
+
+.stats__text{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.poke__moves{
+    padding: 5px 5px 5px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    height: auto;
+    justify-content: center;
+    margin: 20px;
+    gap: 15px;
+    text-align: center;
+    box-shadow: 0 3px 6px #00000080;
+    overflow: auto;
+    border-radius: 10px;
+    background-color: #fdfb71;
+}
+
+.hp__progress{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 30px;
+}
+
+.attack__progress{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 30px;
+}
+
+.defense__progress{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 30px;
+}
+
+.speed__progress{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 30px;
+}
+
+.contor__moves{
+    width: 100%;
+    height: 20px;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 3px 6px #00000080;
+    border-radius: 5px;
+    margin: 10px;
+    gap: 15px;
+}
+
+.moves__name{
+    width: 40%;
+    display: flex;
+    flex-direction:column;
+    margin: 20px;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+}
